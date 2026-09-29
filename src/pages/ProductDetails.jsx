@@ -9,7 +9,7 @@ import { getWhatsAppLink } from '../data/siteConfig';
 import Breadcrumb from '../components/Breadcrumb';
 import ProductCard from '../components/ProductCard';
 import SectionHeading from '../components/SectionHeading';
-import CTASection from '../components/CTASection';
+
 
 export default function ProductDetails() {
   const { slug } = useParams();
@@ -128,7 +128,7 @@ export default function ProductDetails() {
                 <span className="text-xs font-semibold text-brand-orange uppercase tracking-wider">
                   {product.category}
                 </span>
-                <h1 className="text-2xl sm:text-3xl font-extrabold text-zinc-950 font-heading tracking-tight mt-1">
+                <h1 className="text-2xl sm:text-3xl font-extrabold text-zinc-950 font-heading tracking-tight mt-1 break-words">
                   {product.name}
                 </h1>
                 {product.model && (
@@ -266,8 +266,7 @@ export default function ProductDetails() {
         </section>
       )}
 
-      {/* Final CTA */}
-      <CTASection />
+
 
     </div>
   );

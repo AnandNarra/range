@@ -28,7 +28,7 @@ export default function LightboxModal({ project, isOpen, onClose }) {
       />
 
       {/* Modal Dialog */}
-      <div className="relative bg-white rounded-2xl max-w-4xl w-full overflow-hidden shadow-2xl z-10 my-8 animate-in zoom-in-95 duration-200">
+      <div className="relative bg-white rounded-2xl max-w-2xl w-full overflow-hidden shadow-2xl z-10 my-8 animate-in zoom-in-95 duration-200">
         
         {/* Close Button */}
         <button
@@ -41,7 +41,7 @@ export default function LightboxModal({ project, isOpen, onClose }) {
         </button>
 
         {/* Hero Image */}
-        <div className="relative h-72 sm:h-96 w-full bg-zinc-900">
+        <div className="relative h-64 sm:h-72 w-full bg-zinc-900">
           <img
             src={project.image}
             alt={project.title}

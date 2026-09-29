@@ -9,7 +9,7 @@ import { categories } from '../data/categories';
 import ProductCard from '../components/ProductCard';
 import Breadcrumb from '../components/Breadcrumb';
 import SectionHeading from '../components/SectionHeading';
-import CTASection from '../components/CTASection';
+
 
 export default function PoultryEquipment() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -321,8 +321,7 @@ export default function PoultryEquipment() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <CTASection />
+
 
     </div>
   );
