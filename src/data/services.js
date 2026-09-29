@@ -6,7 +6,7 @@ export const services = [
     slug: "/poultry-construction",
     badge: "Turnkey Infrastructure",
     description: "Professional poultry farm construction solutions designed to support efficient, modern, and well-planned poultry operations from foundation to commissioning.",
-    image: "/images/poultry_ventilation_system.jpg",
+    image: "/modern_poultry_house_interior_index_8.jpeg",
     icon: "Building2",
     highlights: [
       "Custom Pre-Engineered Steel Shed Structures (PEB)",

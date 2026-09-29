@@ -10,7 +10,7 @@ import { softwareFaqs } from '../data/faqs';
 import Breadcrumb from '../components/Breadcrumb';
 import SectionHeading from '../components/SectionHeading';
 import FAQAccordion from '../components/FAQAccordion';
-import CTASection from '../components/CTASection';
+
 
 export default function PoultrySoftware() {
   const [demoForm, setDemoForm] = useState({
@@ -123,119 +123,7 @@ export default function PoultrySoftware() {
         </div>
       </section>
 
-      {/* 2. DASHBOARD PREVIEW MOCKUP */}
-      <section className="py-16 bg-white border-b border-zinc-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="bg-zinc-950 rounded-3xl p-4 sm:p-8 shadow-2xl border border-zinc-800 text-white space-y-6">
-            
-            {/* Mockup Window Controls */}
-            <div className="flex items-center justify-between border-b border-zinc-800 pb-4">
-              <div className="flex items-center gap-2">
-                <span className="w-3 h-3 rounded-full bg-red-500/80" />
-                <span className="w-3 h-3 rounded-full bg-yellow-500/80" />
-                <span className="w-3 h-3 rounded-full bg-emerald-500/80" />
-                <span className="ml-3 text-xs text-zinc-400 font-mono hidden sm:inline">
-                  Orange Structures Farm Cloud • Shed 01 (Broiler Flock Day 28)
-                </span>
-              </div>
-              <div className="flex items-center gap-2 text-xs text-emerald-400 font-medium">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span>Live Telemetry Synchronized</span>
-              </div>
-            </div>
 
-            {/* Mockup Metric Cards Grid */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-              <div className="p-4 rounded-xl bg-zinc-900 border border-zinc-800 space-y-1">
-                <span className="text-[11px] text-zinc-400 uppercase tracking-wider">Avg Temperature</span>
-                <div className="text-2xl sm:text-3xl font-bold font-mono text-white">25.4 °C</div>
-                <span className="text-[10px] text-emerald-400">Target: 25.0 °C (Optimal)</span>
-              </div>
-
-              <div className="p-4 rounded-xl bg-zinc-900 border border-zinc-800 space-y-1">
-                <span className="text-[11px] text-zinc-400 uppercase tracking-wider">Relative Humidity</span>
-                <div className="text-2xl sm:text-3xl font-bold font-mono text-white">62.8 %</div>
-                <span className="text-[10px] text-emerald-400">Target: 60-65 % (Safe)</span>
-              </div>
-
-              <div className="p-4 rounded-xl bg-zinc-900 border border-zinc-800 space-y-1">
-                <span className="text-[11px] text-zinc-400 uppercase tracking-wider">Static Pressure</span>
-                <div className="text-2xl sm:text-3xl font-bold font-mono text-brand-orange">24.2 Pa</div>
-                <span className="text-[10px] text-zinc-400">Jet Velocity: 4.8 m/s</span>
-              </div>
-
-              <div className="p-4 rounded-xl bg-zinc-900 border border-zinc-800 space-y-1">
-                <span className="text-[11px] text-zinc-400 uppercase tracking-wider">Active Fans</span>
-                <div className="text-2xl sm:text-3xl font-bold font-mono text-white">6 / 8 Fans</div>
-                <span className="text-[10px] text-orange-300">Cooling Pads: Cycle 30s</span>
-              </div>
-            </div>
-
-            {/* Mockup Graph & Alert Feed */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 pt-2">
-              <div className="lg:col-span-2 p-5 rounded-2xl bg-zinc-900/90 border border-zinc-800 space-y-3">
-                <div className="flex justify-between items-center text-xs">
-                  <span className="font-bold text-white uppercase tracking-wider">24-Hour Temperature & Humidity Curve</span>
-                  <span className="text-zinc-500 font-mono">Sampling: Every 60s</span>
-                </div>
-                {/* Visual SVG Chart Representation */}
-                <div className="h-44 w-full flex items-end gap-1.5 pt-4 pb-2 px-1 border-b border-zinc-800">
-                  {[45, 48, 52, 50, 47, 44, 40, 38, 42, 55, 68, 72, 75, 78, 80, 74, 69, 62, 58, 50, 48, 46, 45, 44].map((val, i) => (
-                    <div key={i} className="flex-1 flex flex-col justify-end items-center h-full group relative">
-                      <div 
-                        style={{ height: `${val}%` }} 
-                        className={`w-full rounded-t-sm transition-all ${
-                          val > 70 ? 'bg-brand-orange' : 'bg-emerald-500/70 hover:bg-emerald-400'
-                        }`} 
-                      />
-                    </div>
-                  ))}
-                </div>
-                <div className="flex justify-between text-[10px] text-zinc-500 font-mono">
-                  <span>00:00 (Night)</span>
-                  <span>06:00 (Dawn)</span>
-                  <span>12:00 (Noon Peak)</span>
-                  <span>18:00 (Dusk)</span>
-                  <span>23:59 (Current)</span>
-                </div>
-              </div>
-
-              {/* Live Farm Alerts Feed */}
-              <div className="p-5 rounded-2xl bg-zinc-900/90 border border-zinc-800 space-y-3">
-                <span className="font-bold text-white text-xs uppercase tracking-wider block">Live System Status</span>
-                <div className="space-y-2 text-xs">
-                  <div className="p-2.5 rounded-lg bg-zinc-800/80 border border-zinc-700/80 flex items-start gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                    <div>
-                      <span className="font-medium text-white block">Shed 01 Tunnel Phase 3 Active</span>
-                      <span className="text-[10px] text-zinc-400">Triggered at 13:20 IST • Air speed: 2.3 m/s</span>
-                    </div>
-                  </div>
-
-                  <div className="p-2.5 rounded-lg bg-zinc-800/80 border border-zinc-700/80 flex items-start gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                    <div>
-                      <span className="font-medium text-white block">Water Intake Meter Normal</span>
-                      <span className="text-[10px] text-zinc-400">Total today: 4,820 Litres • Pressure 28 cm</span>
-                    </div>
-                  </div>
-
-                  <div className="p-2.5 rounded-lg bg-orange-950/40 border border-brand-orange/30 flex items-start gap-2">
-                    <Bell className="w-4 h-4 text-brand-orange shrink-0 mt-0.5" />
-                    <div>
-                      <span className="font-medium text-orange-200 block">Shed 02 Feed Hopper Level: 20%</span>
-                      <span className="text-[10px] text-orange-300">Automated auger refill queued</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
 
       {/* 3. SOFTWARE FEATURES */}
       <section className="py-20 bg-zinc-50 border-b border-zinc-200">
@@ -480,8 +368,6 @@ export default function PoultrySoftware() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <CTASection />
 
     </div>
   );

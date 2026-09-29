@@ -114,7 +114,7 @@ export default function Home() {
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-zinc-200 aspect-4/3">
                 <img
-                  src="/images/poultry_ventilation_system.jpg"
+                  src="/modern_poultry_house_interior_index_8.jpeg"
                   alt="Orange Structures Modern Poultry Farm Construction Site"
                   className="w-full h-full object-cover"
                 />

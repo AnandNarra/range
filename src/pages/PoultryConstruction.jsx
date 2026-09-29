@@ -30,7 +30,6 @@ export default function PoultryConstruction() {
   const [formError, setFormError] = useState('');
   const [formSuccessMethod, setFormSuccessMethod] = useState('');
 
-  const constructionProjects = projects.filter(p => p.categorySlug === 'broiler' || p.categorySlug === 'layer' || p.categorySlug === 'infrastructure').slice(0, 3);
 
   const constructionServicesList = [
     {
@@ -174,7 +173,7 @@ export default function PoultryConstruction() {
 
             <div className="rounded-3xl overflow-hidden shadow-2xl border border-zinc-200 aspect-4/3">
               <img
-                src="/images/commercial_broilers.jpg"
+                src="/images-1.jpg"
                 alt="Inside modern closed broiler house"
                 className="w-full h-full object-cover"
               />
@@ -252,59 +251,7 @@ export default function PoultryConstruction() {
         </div>
       </section>
 
-      {/* 5. CONSTRUCTION PROCESS TIMELINE */}
-      <section className="py-20 bg-zinc-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <SectionHeading
-            badge="Construction Workflow"
-            title="Our Turnkey Execution Process"
-            description="From blueprint to completion in an organized, transparent timeline."
-            light={true}
-          />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
-            {[
-              { stage: "01", title: "Site Survey", desc: "Topography, wind orientation & biosecurity clearance." },
-              { stage: "02", title: "CAD Engineering", desc: "Structural PEB modeling & ventilation air volume calculations." },
-              { stage: "03", title: "Civil Works", desc: "Foundation casting, plinth beams, and non-slip floor concrete." },
-              { stage: "04", title: "Steel Erection", desc: "Galvanized PEB steel frame & truss portal installation." },
-              { stage: "05", title: "PUF Paneling", desc: "Airtight roof and wall sandwich panel cladding." },
-              { stage: "06", title: "Rigging & Test", desc: "Fan, cooling pad, and feeder line calibration." }
-            ].map((step, idx) => (
-              <div key={idx} className="p-4 rounded-xl bg-zinc-800/80 border border-zinc-700/80 space-y-2">
-                <span className="text-xl font-bold font-mono text-brand-orange">{step.stage}</span>
-                <h4 className="text-sm font-bold text-white font-heading">{step.title}</h4>
-                <p className="text-[11px] text-zinc-400 leading-relaxed">{step.desc}</p>
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
-      {/* 6. REFERENCE PORTFOLIO GALLERY */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <SectionHeading
-            badge="Project Gallery"
-            title="Demonstration Construction Installations"
-            description="Representative photos of closed broiler sheds, multi-tier layer structures, and farm steel frames."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {constructionProjects.map(proj => (
-              <ProjectCard 
-                key={proj.id} 
-                project={proj} 
-                onSelect={(p) => setSelectedProject(p)} 
-              />
-            ))}
-          </div>
-
-        </div>
-      </section>
 
       {/* 7. FAQS */}
       <section className="py-20 bg-zinc-50 border-t border-zinc-200/80">

@@ -92,35 +92,6 @@ export const products = [
     applications: ["Broiler floor rearing", "Layer pullet sheds", "Breeder parent stock houses"],
     isFeatured: true
   },
-  {
-    id: "prod-drink-02",
-    slug: "automated-water-dosing-medicament-pump",
-    name: "Automated Water Medicator & Dosing Pump",
-    category: "Drinking Systems",
-    categorySlug: "drinking-systems",
-    model: "OS-DOSE-02",
-    shortDesc: "Water-powered precision dosing pump for accurate administration of vaccines, vitamins, and sanitizers.",
-    fullDesc: "Hydraulically powered proportional injector pump that requires zero electricity. Automatically injects accurate medication concentrates into the main drinking water pipeline in direct proportion to fluctuating water consumption volumes.",
-    image: "/images/dosing_pump.jpg",
-    gallery: [
-      "/images/dosing_pump.jpg"
-    ],
-    features: [
-      "Hydraulic piston motor operated purely by water flow pressure",
-      "Adjustable dosing ratio from 0.2% to 2.0% with high repeatability",
-      "Chemical and acid resistant Viton internal seals and composite body",
-      "Integrated bypass manifold valve kit and backflow preventer",
-      "Includes 120-mesh dual water pre-filtration cartridge"
-    ],
-    specifications: [
-      { label: "Operating Pressure", value: "0.3 to 6.0 Bar (4.3 to 85 PSI)" },
-      { label: "Water Flow Range", value: "10 L/h to 2,500 L/h" },
-      { label: "Injection Rate", value: "0.2% to 2.0% (1:500 to 1:50)" },
-      { label: "Inlet/Outlet Connection", value: "3/4 inch BSP Male Thread" }
-    ],
-    applications: ["Flock vaccination", "Organic acid dispensing", "Electrolyte and mineral delivery"],
-    isFeatured: false
-  },
 
   // --- VENTILATION SYSTEMS ---
   {
@@ -132,10 +103,10 @@ export const products = [
     model: "OS-FAN-C50",
     shortDesc: "High CFM aerodynamic cone exhaust fan with dual butterfly shutters and cast aluminum blades.",
     fullDesc: "Engineered specifically for extreme tunnel ventilation requirements in modern closed poultry housing. The aerodynamic fiberglass cone extension increases air throughput by 10-15% while reducing electricity consumption per CFM compared to standard box fans.",
-    image: "/images/poultry_house_fans.jpg",
+    image: "/Best-Exhaust-Fan-for-Poultry-Farms-in-India.jpg",
     gallery: [
-      "/images/poultry_house_fans.jpg",
-      "/images/poultry_ventilation_system.jpg"
+      "/Best-Exhaust-Fan-for-Poultry-Farms-in-India.jpg",
+      "/exhaust-fan-1.jpg"
     ],
     features: [
       "Corrosion-resistant galvanized frame with aerodynamic poly cone",
@@ -163,9 +134,9 @@ export const products = [
     model: "OS-INLET-W60",
     shortDesc: "Anti-UV insulated air inlet windows with aerodynamic curved louvers for precision minimum ventilation.",
     fullDesc: "Critical for cold weather and minimum ventilation cycles. Directs incoming fresh air upwards toward the ceiling ridge to mix with warm stagnant air before descending, preventing cold air drafts from dropping directly onto young chicks.",
-    image: "/images/poultry_ventilation_system.jpg",
+    image: "/ventillation.jpg",
     gallery: [
-      "/images/poultry_ventilation_system.jpg"
+      "/ventillation.jpg"
     ],
     features: [
       "Virgin ABS engineering plastic with anti-UV aging additives",
@@ -194,9 +165,9 @@ export const products = [
     model: "OS-PAD-7090",
     shortDesc: "High-grade 7090 corrugated kraft paper cooling pads with extruded aluminum top & bottom water gutter profiles.",
     fullDesc: "Provides dramatic temperature drop of 6°C to 12°C during peak summer months. Crafted from premium pure virgin Swedish kraft paper impregnated with anti-rot resins, paired with heavy-duty anti-corrosion aluminum alloy framing and submersible water recirculation pumps.",
-    image: "/images/cooling_pad.jpg",
+    image: "/coolingPad.webp",
     gallery: [
-      "/images/cooling_pad.jpg"
+      "/coolingPad.webp"
     ],
     features: [
       "Pure virgin cellulose paper with high water absorption rate (4-5s)",
@@ -223,9 +194,10 @@ export const products = [
     model: "OS-MIST-70B",
     shortDesc: "70 Bar high-pressure ceramic nozzle fogging system for instant shed cooling, dust reduction, and humidity control.",
     fullDesc: "Atomizes water droplets down to ultra-fine 10-15 microns that evaporate instantly in hot air without wetting the birds or bed litter. Equipped with high-pressure triplex ceramic plunger pump, solenoid water valves, and stainless steel distribution pipes.",
-    image: "/images/poultry_ventilation_system.jpg",
+    image: "/fogging-and-misting-system.jpg",
     gallery: [
-      "/images/poultry_ventilation_system.jpg"
+      "/fogging-and-misting-system.jpg",
+      "/fog.jpg"
     ],
     features: [
       "70 Bar (1000 PSI) Italian triplex plunger brass pump",
@@ -254,9 +226,10 @@ export const products = [
     model: "OS-BROOD-G10",
     shortDesc: "Even-heat radiant infrared ceramic gas brooder with thermostat control and dual safety cutoff valves.",
     fullDesc: "Simulates maternal warmth for newborn day-old chicks by converting LPG or natural gas into uniform infrared radiant heat. The radiant heat warms the birds and floor litter directly without squandering energy overheating the entire ceiling airspace.",
-    image: "/images/broiler_chicks_brooder.jpg",
+    image: "/heatingPad.avif",
     gallery: [
-      "/images/broiler_chicks_brooder.jpg"
+      "/heatingPad.avif",
+      "/chicken-heater-2023-2.jpg"
     ],
     features: [
       "High-efficiency porous ceramic honeycomb combustion tiles",
@@ -307,35 +280,7 @@ export const products = [
     applications: ["Fully automated broiler sheds", "Layer environmentally controlled barns", "Parent breeder houses"],
     isFeatured: true
   },
-  {
-    id: "prod-auto-02",
-    slug: "digital-static-pressure-sensor-transmitter",
-    name: "Digital Static Pressure Sensor & Transmitter",
-    category: "Automation & Controllers",
-    categorySlug: "automation-controllers",
-    model: "OS-SENS-DP100",
-    shortDesc: "Ultra-precise differential air pressure transmitter measuring negative shed pressure in Pascals.",
-    fullDesc: "Maintains optimal air inlet jet velocity during minimum and tunnel ventilation. Detects pressure differences between indoor shed air and outdoor atmosphere with millipascal sensitivity, instructing actuators to open or close wall air inlets dynamically.",
-    image: "/images/plc_controller.jpg",
-    gallery: [
-      "/images/plc_controller.jpg"
-    ],
-    features: [
-      "Silicon piezoresistive micro-machined pressure cell",
-      "Calibrated range 0 to 100 Pascals (0 to 0.4 inch W.C.)",
-      "4-20mA or 0-10V linear output to main controller",
-      "Weatherproof IP65 outdoor casing with clean air filters",
-      "Quick zero-calibration push button"
-    ],
-    specifications: [
-      { label: "Accuracy", value: "± 1.0% Full Scale" },
-      { label: "Pressure Range", value: "-20 to +100 Pa" },
-      { label: "Operating Temperature", value: "-10°C to +60°C" },
-      { label: "Signal Interface", value: "0–10V / 4–20mA / Modbus RTU" }
-    ],
-    applications: ["Automated air inlet modulation", "Tunnel ventilation velocity control", "Filter clog alarms"],
-    isFeatured: false
-  },
+
 
   // --- ACCESSORIES & SPARES ---
   {
