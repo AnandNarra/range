@@ -1,13 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShoppingBag, ArrowRight, MessageSquare, Check, Eye } from 'lucide-react';
-import { useEnquiryCart } from '../context/EnquiryCartContext';
 import { getWhatsAppLink } from '../data/siteConfig';
 
 export default function ProductCard({ product }) {
-  const { addToCart, cartItems } = useEnquiryCart();
-
-  const isInCart = cartItems.some(item => item.product.id === product.id);
 
   const directWhatsAppLink = getWhatsAppLink(
     `Hello Orange Structures,\n\nI would like to enquire about the price, availability, and technical specifications for:\n*Product:* ${product.name}\n*Model:* ${product.model || 'Standard'}\n*Category:* ${product.category}\n\nPlease share quotation details.`
@@ -91,28 +87,6 @@ export default function ProductCard({ product }) {
             </a>
           </div>
 
-          {/* Add to Multi-Item Enquiry Cart */}
-          <button
-            type="button"
-            onClick={() => addToCart(product, 1)}
-            className={`w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-semibold transition-all shadow-sm ${
-              isInCart
-                ? 'bg-emerald-600 text-white'
-                : 'bg-brand-orange hover:bg-brand-orangeDark text-white'
-            }`}
-          >
-            {isInCart ? (
-              <>
-                <Check className="w-4 h-4" />
-                <span>Added to Enquiry Cart</span>
-              </>
-            ) : (
-              <>
-                <ShoppingBag className="w-4 h-4" />
-                <span>Add to Quote Cart</span>
-              </>
-            )}
-          </button>
         </div>
       </div>
     </div>

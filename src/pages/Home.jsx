@@ -48,13 +48,16 @@ export default function Home() {
       <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center overflow-hidden bg-brand-black text-white">
         {/* Background Image with Dark Vignette Overlay */}
         <div className="absolute inset-0 z-0">
-          <img
-            src="/images/modern_poultry_farm_shed.jpg"
-            alt="Modern Automated Poultry Farm by Orange Structures"
-            className="w-full h-full object-cover object-center scale-102 filter brightness-65"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/60" />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-black/40" />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="/images/modern_poultry_farm_shed.jpg"
+            className="w-full h-full object-cover object-center scale-102"
+          >
+            <source src="/hero-background.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-grid-pattern-dark opacity-15 pointer-events-none" />
         </div>
 
@@ -68,12 +71,12 @@ export default function Home() {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-heading tracking-tight leading-[1.15] max-w-4xl drop-shadow-md">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-heading tracking-tight leading-[1.2] max-w-4xl drop-shadow-md">
             Building Smarter <span className="text-brand-orange">Poultry Farms</span> for a Better Tomorrow.
           </h1>
 
           {/* Description */}
-          <p className="mt-5 text-base sm:text-lg lg:text-xl text-zinc-300 max-w-2xl leading-relaxed">
+          <p className="mt-5 text-sm sm:text-base lg:text-lg text-zinc-300 max-w-2xl leading-relaxed">
             Complete poultry farm construction, advanced equipment, and intelligent climate control solutions — all under one roof.
           </p>
 
@@ -96,25 +99,7 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* Trust Metric Badges */}
-          <div className="mt-12 pt-8 border-t border-white/15 grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-10 w-full max-w-4xl text-left">
-            <div>
-              <div className="text-2xl sm:text-3xl font-bold text-white font-heading">350+</div>
-              <div className="text-xs text-zinc-400 mt-0.5">Sheds Engineered</div>
-            </div>
-            <div>
-              <div className="text-2xl sm:text-3xl font-bold text-brand-orange font-heading">8M+</div>
-              <div className="text-xs text-zinc-400 mt-0.5">Bird Capacity Built</div>
-            </div>
-            <div>
-              <div className="text-2xl sm:text-3xl font-bold text-white font-heading">1,200+</div>
-              <div className="text-xs text-zinc-400 mt-0.5">Automated Lines</div>
-            </div>
-            <div>
-              <div className="text-2xl sm:text-3xl font-bold text-brand-orange font-heading">98.5%</div>
-              <div className="text-xs text-zinc-400 mt-0.5">Client Satisfaction</div>
-            </div>
-          </div>
+
 
         </div>
       </section>

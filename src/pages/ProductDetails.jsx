@@ -5,7 +5,6 @@ import {
   CheckCircle2, ShieldCheck, Truck, Check, HelpCircle 
 } from 'lucide-react';
 import { products } from '../data/products';
-import { useEnquiryCart } from '../context/EnquiryCartContext';
 import { getWhatsAppLink } from '../data/siteConfig';
 import Breadcrumb from '../components/Breadcrumb';
 import ProductCard from '../components/ProductCard';
@@ -15,9 +14,9 @@ import CTASection from '../components/CTASection';
 export default function ProductDetails() {
   const { slug } = useParams();
   const navigate = useNavigate();
-  const { addToCart, cartItems, setIsOpen: setCartOpen } = useEnquiryCart();
 
-  const [quantity, setQuantity] = useState(1);
+
+
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   // Find product by slug
@@ -40,7 +39,7 @@ export default function ProductDetails() {
   }
 
   const gallery = product.gallery || [product.image];
-  const isInCart = cartItems.some(item => item.product.id === product.id);
+
 
   // Related products from same category
   const relatedProducts = products
@@ -48,7 +47,7 @@ export default function ProductDetails() {
     .slice(0, 3);
 
   const directWhatsAppLink = getWhatsAppLink(
-    `Hello Orange Structures,\n\nI am interested in:\n*Product:* ${product.name}\n*Model:* ${product.model || 'Standard'}\n*Category:* ${product.category}\n*Requested Quantity:* ${quantity} Unit(s)\n\nPlease share commercial quotation, availability, and delivery lead time.`
+    `Hello Orange Structures,\n\nI am interested in:\n*Product:* ${product.name}\n*Model:* ${product.model || 'Standard'}\n*Category:* ${product.category}\n\nPlease share commercial quotation, availability, and delivery lead time.`
   );
 
   return (
@@ -74,7 +73,7 @@ export default function ProductDetails() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             
             {/* Left: Product Images Gallery */}
-            <div className="space-y-4 sticky top-28">
+            <div className="space-y-4 lg:sticky lg:top-28">
               <div className="relative aspect-4/3 rounded-3xl overflow-hidden bg-zinc-100 border border-zinc-200 shadow-md">
                 <img
                   src={gallery[activeImageIndex] || product.image}
@@ -206,33 +205,10 @@ export default function ProductDetails() {
               {/* Purchase / Enquiry Controls */}
               <div className="space-y-4 border-t border-zinc-200 pt-6">
                 
-                {/* Quantity Selector */}
-                <div className="flex items-center gap-4">
-                  <span className="text-xs font-semibold text-zinc-700">Quantity Needed:</span>
-                  <div className="flex items-center border border-zinc-300 rounded-xl bg-white overflow-hidden shadow-sm">
-                    <button
-                      type="button"
-                      onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                      className="px-3.5 py-1.5 text-zinc-600 hover:text-brand-orange hover:bg-zinc-100 font-bold"
-                    >
-                      -
-                    </button>
-                    <span className="px-4 py-1.5 text-xs font-bold text-zinc-900">
-                      {quantity}
-                    </span>
-                    <button
-                      type="button"
-                      onClick={() => setQuantity(quantity + 1)}
-                      className="px-3.5 py-1.5 text-zinc-600 hover:text-brand-orange hover:bg-zinc-100 font-bold"
-                    >
-                      +
-                    </button>
-                  </div>
-                  <span className="text-xs text-zinc-400">Unit(s)</span>
-                </div>
+
 
                 {/* Primary CTA Buttons */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 gap-3">
                   
                   {/* WhatsApp Direct Quotation */}
                   <a
@@ -245,18 +221,7 @@ export default function ProductDetails() {
                     <span>Request Price on WhatsApp</span>
                   </a>
 
-                  {/* Add to Multi-Item Cart */}
-                  <button
-                    type="button"
-                    onClick={() => {
-                      addToCart(product, quantity);
-                      setCartOpen(true);
-                    }}
-                    className="flex items-center justify-center gap-2 py-3 px-5 bg-brand-orange hover:bg-brand-orangeDark text-white font-bold rounded-xl text-xs sm:text-sm shadow-brand transition-all active:scale-98"
-                  >
-                    <ShoppingBag className="w-4 h-4" />
-                    <span>Add to Multi-Product Quote</span>
-                  </button>
+
                 </div>
 
                 <div className="text-[11px] text-zinc-500 text-center">

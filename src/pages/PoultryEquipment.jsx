@@ -6,7 +6,6 @@ import {
 } from 'lucide-react';
 import { products } from '../data/products';
 import { categories } from '../data/categories';
-import { useEnquiryCart } from '../context/EnquiryCartContext';
 import ProductCard from '../components/ProductCard';
 import Breadcrumb from '../components/Breadcrumb';
 import SectionHeading from '../components/SectionHeading';
@@ -21,7 +20,6 @@ export default function PoultryEquipment() {
   const [sortBy, setSortBy] = useState('featured');
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
 
-  const { totalItems, setIsOpen: setCartOpen } = useEnquiryCart();
 
   // Sync category with URL search param
   useEffect(() => {
@@ -107,16 +105,7 @@ export default function PoultryEquipment() {
               </p>
             </div>
 
-            {/* Cart Button on Hero */}
-            <button
-              type="button"
-              onClick={() => setCartOpen(true)}
-              className="inline-flex items-center gap-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/25 px-5 py-3 rounded-xl font-semibold text-xs sm:text-sm transition-all self-start md:self-auto"
-            >
-              <ShoppingBag className="w-4 h-4 text-brand-orange" />
-              <span>Enquiry Cart ({totalItems})</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </button>
+
           </div>
         </div>
       </section>

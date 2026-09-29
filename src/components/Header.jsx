@@ -5,14 +5,12 @@ import {
   ArrowRight, Building2, Wrench, Cpu, CheckCircle2 
 } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
-import { useEnquiryCart } from '../context/EnquiryCartContext';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const { totalItems, setIsOpen: setCartOpen } = useEnquiryCart();
   const location = useLocation();
 
   // Close menus on route change
@@ -38,41 +36,6 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-40 w-full transition-all duration-300">
-      {/* Top Utility Bar (Desktop Only) */}
-      <div className="hidden lg:block bg-brand-black text-zinc-300 text-xs py-2 border-b border-zinc-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          <div className="flex items-center gap-6">
-            <span className="flex items-center gap-1.5 text-zinc-400">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              {siteConfig.brandMotto}
-            </span>
-            <span className="text-zinc-600">|</span>
-            <a 
-              href={`tel:${siteConfig.contact.phoneClean}`}
-              className="flex items-center gap-1.5 hover:text-brand-orange transition-colors"
-            >
-              <Phone className="w-3.5 h-3.5 text-brand-orange" />
-              <span>{siteConfig.contact.phone}</span>
-            </a>
-            <a 
-              href={`mailto:${siteConfig.contact.salesEmail}`}
-              className="flex items-center gap-1.5 hover:text-brand-orange transition-colors"
-            >
-              <Mail className="w-3.5 h-3.5 text-brand-orange" />
-              <span>{siteConfig.contact.salesEmail}</span>
-            </a>
-          </div>
-          <div className="flex items-center gap-4">
-            <span className="text-zinc-400">{siteConfig.contact.workingHours}</span>
-            <Link 
-              to="/request-quote"
-              className="text-brand-orange hover:underline font-medium ml-2"
-            >
-              Emergency Farm Assistance →
-            </Link>
-          </div>
-        </div>
-      </div>
 
       {/* Main Navigation Bar */}
       <div 
@@ -193,20 +156,6 @@ export default function Header() {
 
           {/* Desktop Right Actions: Cart & Quote Button */}
           <div className="hidden lg:flex items-center gap-4">
-            {/* Equipment Enquiry Cart Trigger */}
-            <button
-              type="button"
-              onClick={() => setCartOpen(true)}
-              className="relative p-2.5 text-zinc-700 hover:text-brand-orange hover:bg-orange-50/80 rounded-xl transition-all border border-zinc-200 focus:outline-none"
-              title="View Enquiry Cart"
-            >
-              <ShoppingBag className="w-5 h-5" />
-              {totalItems > 0 && (
-                <span className="absolute -top-1.5 -right-1.5 bg-brand-orange text-white text-[11px] font-bold h-5 w-5 rounded-full flex items-center justify-center shadow-md animate-scale">
-                  {totalItems}
-                </span>
-              )}
-            </button>
 
             {/* Orange Get a Quote Button */}
             <Link
@@ -220,19 +169,6 @@ export default function Header() {
 
           {/* Mobile Actions: Cart + Hamburger */}
           <div className="flex items-center gap-2 lg:hidden">
-            <button
-              type="button"
-              onClick={() => setCartOpen(true)}
-              className="relative p-2 text-zinc-800 hover:text-brand-orange rounded-lg border border-zinc-200"
-              aria-label="Enquiry Cart"
-            >
-              <ShoppingBag className="w-5 h-5" />
-              {totalItems > 0 && (
-                <span className="absolute -top-1.5 -right-1.5 bg-brand-orange text-white text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">
-                  {totalItems}
-                </span>
-              )}
-            </button>
 
             <button
               type="button"

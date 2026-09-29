@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import EnquiryDrawer from './components/EnquiryDrawer';
+
 import MobileContactBar from './components/MobileContactBar';
 import WhatsAppFloatingButton from './components/WhatsAppFloatingButton';
 import ScrollToTop from './components/ScrollToTop';
@@ -47,8 +47,6 @@ export default function App() {
       {/* Main Footer */}
       <Footer />
 
-      {/* Interactive Global Slide-out Drawer for Enquiry Cart */}
-      <EnquiryDrawer />
 
       {/* Floating WhatsApp Action Button */}
       <WhatsAppFloatingButton />

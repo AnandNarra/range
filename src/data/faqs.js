@@ -13,7 +13,7 @@ export const homeFaqs = [
   },
   {
     question: "How can I request a quotation?",
-    answer: "You can easily request a detailed quotation through our website using the 'Request a Quote' form, by sending an enquiry via WhatsApp (+91 98765 43210), or by adding equipment directly to your enquiry cart and sharing your specifications with our engineering team."
+    answer: "You can easily request a detailed quotation through our website using the 'Request a Quote' form, or by sending an enquiry via WhatsApp (+91 98765 43210) to share your specifications with our engineering team."
   },
   {
     question: "What poultry management software solutions are available?",
