@@ -324,7 +324,7 @@ export default function RequestQuote() {
                     <input
                       type="tel"
                       required
-                      placeholder="e.g. +91 98765 43210"
+                      placeholder="e.g. +91 98852 79787"
                       value={formData.phone}
                       onChange={(e) => setFormData({...formData, phone: e.target.value})}
                       className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-zinc-300 focus:outline-none focus:border-brand-orange bg-white"

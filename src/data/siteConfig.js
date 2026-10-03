@@ -13,13 +13,13 @@ export const siteConfig = {
   
   // Contact details (Configurable placeholders - replace with actual client credentials)
   contact: {
-    phone: "+91 98765 43210",
-    phoneClean: "+919876543210", // Used for tel: links
-    whatsapp: "+91 98765 43210",
-    whatsappClean: "919876543210", // Country code + number without plus for wa.me links
-    email: "info@orangestructures.com",
-    salesEmail: "sales@orangestructures.com",
-    supportEmail: "support@orangestructures.com",
+    phone: "+91 98852 79787",
+    phoneClean: "+919885279787", // Used for tel: links
+    whatsapp: "+91 98852 79787",
+    whatsappClean: "919885279787", // Country code + number without plus for wa.me links
+    email: "csr.mf7@gmail.com",
+    salesEmail: "csr.mf7@gmail.com",
+    supportEmail: "csr.mf7@gmail.com",
     address: {
       line1: "Orange Structures Industrial Campus",
       line2: "Agricultural Engineering & Automation Zone",
